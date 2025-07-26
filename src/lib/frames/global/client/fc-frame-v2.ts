@@ -13,8 +13,8 @@ export const generateURLFCFrameEmbed = ({
 }) => {
 	const FrameEmbed = {
 		// Frame spec version. Required.
-		// Example: "next"
-		version: 'next',
+		// Example: "1"
+		version: '1',
 
 		// Frame image.
 		// Max 512 characters.

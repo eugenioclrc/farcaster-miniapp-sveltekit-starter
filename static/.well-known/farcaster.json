@@ -1,0 +1,17 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjE3OTEsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHhmOWM0ODNlNTFjOUIzNGMyYmNENTgyNTYwMzBlQjQzMmFEQTAyNDhmIn0",
+    "payload": "eyJkb21haW4iOiJ0dW4tNTU0NS5mbGFzaHNvZnQuZXUifQ",
+    "signature": "MHg2N2Q2ZTQyZjcyNDk3NWY4YjE3ZDQyYTVkZjU2YzFmMjQ2YzhiZTM4OWM2NWY5MjMyMDZlNDMxNThjNTE1MDIyMWNiNDM2YTMwZWRkOTcxYTcyNWI3Zjg2YTdhZGQyZDAzOWQzM2ViZDY5YzhkNjg0MjNjZjRhMzRkY2MwNzM2ZjFi"
+  },
+  "frame": {
+    "version": "1",
+    "name": "SveleteKit starter Mini App",
+    "iconUrl": "https://tunn-5545.flashsoft.eu/hotlink-ok/favicon.png",
+    "homeUrl": "https://tunn-5545.flashsoft.eu/",
+    "imageUrl": "https://tunn-5545.flashsoft.eu/images/ogs/ffe-og-index.webp",
+    "buttonTitle": "Open App",
+    "splashImageUrl": "https://tunn-5545.flashsoft.eu/hotlink-ok/favicon.png",
+    "splashBackgroundColor": "#35303f"
+  }
+} 
