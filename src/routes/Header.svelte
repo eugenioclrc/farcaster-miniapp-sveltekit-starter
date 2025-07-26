@@ -4,7 +4,7 @@
 
 	function openProfile(e: Event) {
 		e.preventDefault();
-		$frameSDK.actions.viewProfile({ fid: 9152 });
+		$frameSDK.actions.viewProfile({ fid: 16270 });
 	}
 
 	function openHome(e: Event) {
