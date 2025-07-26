@@ -8,7 +8,7 @@
     "version": "1",
     "name": "SveleteKit starter Mini App",
     "iconUrl": "https://tunn-5545.flashsoft.eu/hotlink-ok/favicon.png",
-    "homeUrl": "https://tunn-5545.flashsoft.eu/",
+    "homeUrl": "https://farcaster-miniapp-sveltekit-starter.vercel.app/",
     "imageUrl": "https://tunn-5545.flashsoft.eu/images/ogs/ffe-og-index.webp",
     "buttonTitle": "Open App",
     "splashImageUrl": "https://tunn-5545.flashsoft.eu/hotlink-ok/favicon.png",

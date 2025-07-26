@@ -21,7 +21,7 @@
 
 	import { generateURLFCFrameEmbed } from '$lib/frames/global/client/fc-frame-v2';
 
-	const ogImage = `${config.resolvedBaseUrl}/images/ogs/ffe-og-index.webp`;
+	const ogImage = `${config.resolvedBaseUrl}/logo.png`;
 	const pageUrl = SveltePage.url.href.replace('http:', 'https:');
 	const pageTitle = 'SveleteKit starter Mini App';
 	const pageDescription =

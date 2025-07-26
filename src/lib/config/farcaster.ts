@@ -50,8 +50,8 @@ export const FCConfig = {
 		// Image must have a 3:2 ratio.
 		// Example: "https://yoink.party/framesV2/opengraph-image"
 		imageUrl: IS_DEV_ENABLED
-			? config.devBaseUrl + '/images/ogs/ffe-og-index.webp'
-			: config.baseSiteUrl + '/images/ogs/ffe-og-index.webp',
+			? config.devBaseUrl + '/logo.png'
+			: config.baseSiteUrl + '/logo.png',
 
 		// Default button title to use when frame is rendered in a feed.
 		// Max 32 characters.
@@ -105,13 +105,13 @@ export const FCConfig = {
 		primaryCategory: config.extendedMetadata.primaryCategory,
 		tags: config.extendedMetadata.tags,
 		heroImageUrl: IS_DEV_ENABLED
-			? config.devBaseUrl + '/images/ogs/ffe-og-index.webp'
-			: config.baseSiteUrl + '/images/ogs/ffe-og-index.webp',
+			? config.devBaseUrl + '/logo.png'
+			: config.baseSiteUrl + '/logo.png',
 		tagline: config.extendedMetadata.description,
 		ogTitle: config.siteName,
 		ogDescription: config.extendedMetadata.description,
 		ogImageUrl: IS_DEV_ENABLED
-			? config.devBaseUrl + '/images/ogs/ffe-og-index.webp'
-			: config.baseSiteUrl + '/images/ogs/ffe-og-index.webp'
+			? config.devBaseUrl + '/logo.png'
+			: config.baseSiteUrl + '/logo.png'
 	}
 };
