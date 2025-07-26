@@ -71,7 +71,7 @@
 	<meta property="og:image" content={ogImage} />
 
 	<meta
-		name="fc:frame"
+		name="fc:miniapp"
 		content={generateURLFCFrameEmbed({
 			url: pageUrl,
 			featureImage: ogImage

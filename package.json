@@ -37,6 +37,7 @@
 	"dependencies": {
 		"@farcaster/miniapp-sdk": "^0.1.8",
 		"@farcaster/miniapp-wagmi-connector": "^1.0.0",
+		"@sveltejs/adapter-vercel": "^5.8.1",
 		"@tanstack/react-query": "^5.83.0",
 		"daisyui": "^5.0.47",
 		"jwt-decode": "^4.0.0",
