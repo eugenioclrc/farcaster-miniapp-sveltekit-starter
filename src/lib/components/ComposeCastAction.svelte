@@ -8,7 +8,7 @@
     async function compose() {
       result = await $frameSDK.actions.composeCast({
         text: 'Hello from Demo Mini App',
-        embeds: ['https://test.com/foo%20bar'],
+        embeds: ['https://farcaster-miniapp-sveltekit-starter.vercel.app/'],
       });
     }
   </script>
