@@ -1,13 +1,10 @@
 <script lang="ts">
 	import '../app.css';
 
-	import sdk from '@farcaster/miniapp-sdk'
+	import sdk from '@farcaster/miniapp-sdk';
 
 	import { onMount } from 'svelte';
-	import {
-		frameWalletConfig,
-		isViewingFromFrame,
-	} from '$lib/stores/global/main';
+	import { frameWalletConfig, isViewingFromFrame } from '$lib/stores/global/main';
 	import OnlyViewUsingFrame from './OnlyViewUsingFrame.svelte';
 
 	import { page as SveltePage } from '$app/state';
@@ -23,6 +20,35 @@
 
 	onMount(async () => {
 		const context = await sdk.context;
+
+		sdk.on('miniAppAdded', ({ notificationDetails: details }) => {
+			console.log(`miniAppAdded${details ? ', notifications enabled' : ''}`);
+			if (details) {
+				console.log('notificationDetails', details);
+			}
+		});
+
+		sdk.on('miniAppAddRejected', ({ reason }) => {
+			console.log(`miniAppAddRejected, reason ${reason}`);
+		});
+
+		sdk.on('miniAppRemoved', () => {
+			console.log('miniAppRemoved');
+		});
+
+		sdk.on('notificationsEnabled', ({ notificationDetails: details }) => {
+			console.log('notificationsEnabled');
+			console.log('notificationDetails', details);
+		});
+
+		sdk.on('notificationsDisabled', () => {
+			console.log('notificationsDisabled');
+		});
+
+		sdk.on('primaryButtonClicked', () => {
+			console.log('primaryButtonClicked');
+		});
+
 		sdk.actions.ready();
 
 		if ((context?.user?.fid || 0) > 0) {
@@ -58,7 +84,11 @@
 {/if}
 <!-- Small footer link to source on github -->
 <p class="text-center text-xs text-gray-500">
-	<a href="https://github.com/eugenioclrc/farcaster-miniapp-sveltekit-starter" target="_blank" class="underline">
+	<a
+		href="https://github.com/eugenioclrc/farcaster-miniapp-sveltekit-starter"
+		target="_blank"
+		class="underline"
+	>
 		Source on Github
 	</a>
 </p>

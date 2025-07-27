@@ -4,18 +4,20 @@
 	}
 </script>
 
-<div class="card bg-base-200 text-base-content max-w-xs shadow-xl" role="alert">
-	<div class="card-body items-center text-center gap-4 p-6">
+<div class="card max-w-xs bg-base-200 text-base-content shadow-xl" role="alert">
+	<div class="card-body items-center gap-4 p-6 text-center">
 		<!-- Icon bubble -->
-		<div class="avatar placeholder">
-			<div class="bg-error/20 text-error rounded-full w-12 h-12 flex items-center justify-center mx-auto">
+		<div class="placeholder avatar">
+			<div
+				class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-error/20 text-error"
+			>
 				<svg
 					aria-hidden="true"
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
 					stroke-width="1.5"
-					class="w-6 h-6"
+					class="h-6 w-6"
 				>
 					<path
 						stroke-linecap="round"
@@ -27,15 +29,13 @@
 		</div>
 
 		<h2 class="card-title text-error">Error</h2>
-		<p class="opacity-70 text-sm leading-relaxed">
+		<p class="text-sm leading-relaxed opacity-70">
 			This website is meant to only be accessed through a Farcaster / Warpcast Frame V2 context.
 			Please use a client that implements the V2 Frames spec.
 		</p>
 
 		<div class="card-actions w-full">
-			<button class="btn btn-error btn-block" on:click|preventDefault={reload}>
-				Reload
-			</button>
+			<button class="btn btn-block btn-error" on:click|preventDefault={reload}> Reload </button>
 		</div>
 	</div>
 </div>

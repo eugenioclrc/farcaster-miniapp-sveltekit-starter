@@ -20,7 +20,7 @@
 <div class="mt-8 flex h-96 flex-col items-center justify-center">
 	{#if isLoading}
 		<div class="flex flex-col items-center gap-4">
-			<span class="loading loading-ring loading-lg text-primary"></span>
+			<span class="loading loading-lg loading-ring text-primary"></span>
 			<span class="text-sm text-gray-500">Waiting for frame context...</span>
 		</div>
 	{:else}

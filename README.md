@@ -7,6 +7,7 @@
 A modern, feature-rich starter kit for building Farcaster MiniApps using SvelteKit, TypeScript, and the official Farcaster MiniApp SDK. This demo showcases essential Farcaster integration features including authentication, casting, and frame interactions.
 
 Most of the code is inspider on this links:
+
 - [Post "sveltekit-mini-apps-frames"](https://blog.flashsoft.eu/sveltekit-mini-apps-frames-flashsoft-eu)
 - [andrei0x309/frames.flashsoft.eu](https://github.com/andrei0x309/frames.flashsoft.eu)
 - [farcasterxyz/miniapps](https://github.com/farcasterxyz/miniapps)
@@ -39,12 +40,14 @@ This starter kit provides a solid foundation for developers looking to build Min
 ### Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone <your-repo-url>
    cd minicaster-svelte
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    # or
@@ -55,6 +58,7 @@ This starter kit provides a solid foundation for developers looking to build Min
 
 3. **Configure environment variables**
    Create a `.env` file in the root directory:
+
    ```env
    # Add your configuration variables here
    # Example:
@@ -62,6 +66,7 @@ This starter kit provides a solid foundation for developers looking to build Min
    ```
 
 4. **Start the development server**
+
    ```bash
    npm run dev
    # or
@@ -104,28 +109,33 @@ Explore the frame context and understand what data is available:
 ## 🛠️ Technologies Used
 
 ### Core Framework
+
 - **SvelteKit 2.26+**: Full-stack web framework with SSR support
 - **Svelte 5**: Latest version with runes and improved reactivity
 - **TypeScript 5.8+**: Type-safe development experience
 
 ### Farcaster Integration
+
 - **@farcaster/miniapp-sdk**: Official Farcaster MiniApp SDK
 - **@farcaster/miniapp-wagmi-connector**: Wagmi integration for Farcaster
 - **viem**: Ethereum library for blockchain interactions
 - **wagmi**: React hooks for Ethereum
 
 ### UI & Styling
+
 - **Tailwind CSS 4.1+**: Utility-first CSS framework
 - **DaisyUI 5.0+**: Component library built on Tailwind
 - **@tailwindcss/vite**: Vite plugin for Tailwind
 
 ### Development Tools
+
 - **Vite 7.0+**: Fast build tool and dev server
 - **ESLint**: Code linting and quality enforcement
 - **Prettier**: Code formatting
 - **svelte-check**: TypeScript checking for Svelte
 
 ### Utilities
+
 - **jwt-decode**: JWT token decoding
 - **@tanstack/react-query**: Data fetching and caching
 
@@ -169,13 +179,17 @@ minicaster-svelte/
 ### Key Components
 
 #### QuickAuth.svelte
+
 Handles Farcaster authentication using the quickAuth system. Provides sign-in/sign-out functionality and displays JWT token information.
 
 #### ComposeCastAction.svelte
+
 Demonstrates cast composition using the Farcaster SDK. Creates and publishes casts with custom text and embeds.
 
 #### Frame Integration
+
 The app includes comprehensive frame support with:
+
 - Frame v2 protocol implementation
 - Context inspection tools
 - Webhook handling
