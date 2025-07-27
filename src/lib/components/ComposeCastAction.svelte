@@ -11,6 +11,11 @@
     }
   </script>
   
+  <div class="card bg-base-100 shadow-md p-4">
+    <h2 class="text-lg font-semibold mb-2">📝 Cast</h2>
+    <div class="bg-neutral text-white font-mono text-sm rounded px-3 py-1">
+        sdk.actions.composeCast( ... )
+    </div>
   
     <button
       class="btn w-full bg-purple-500 hover:bg-purple-600 text-white font-bold"
@@ -24,5 +29,5 @@
         Cast Hash: {result.cast.hash}
       </div>
     {/if}
-
+  </div>
   

@@ -5,3 +5,4 @@ export const navigationLoading = writable(false);
 export const frameWalletConfig = writable<WalletConfig>(null as unknown as WalletConfig);
 export const isViewingFromFrame = writable(false);
 export const isWalletReady = writable(false);
+export const userWallet = writable<string | null>(null);

@@ -4,6 +4,7 @@
     import QuickAuth from '$lib/components/QuickAuth.svelte';
     import ComposeCastAction from '$lib/components/ComposeCastAction.svelte';
 	import sdk from '@farcaster/miniapp-sdk';
+    import FarcasterWalletConnect from '$lib/components/FarcasterWalletConnect.svelte';
 
     let token: string | null = $state(null);
     let isContextOpen = $state(false);
@@ -50,15 +51,7 @@
     <QuickAuth setToken={(t) => token = t} />
 </div>
 
-
-<div class="card bg-base-100 shadow-md p-4">
-    <h2 class="text-lg font-semibold mb-2">📝 Cast</h2>
-    <div class="bg-neutral text-white font-mono text-sm rounded px-3 py-1">
-        sdk.actions.composeCast( ... )
-    </div>
-    <ComposeCastAction />
-  </div>
-
+<ComposeCastAction />
 
 <div class="card bg-base-100 shadow-md p-4">
     <h2 class="text-lg font-semibold mb-2">📝 Cast</h2>
@@ -77,6 +70,16 @@
     <input type="number" bind:value={fid} class="input input-bordered w-full max-w-xs mt-0.5" />
     <button class="btn btn-primary" onclick={() => sdk.actions.viewProfile({ fid: fid })}>View Profile</button>
 </div>
+
+<!-- sdk.actions.addMiniApp -->
+<div class="card bg-base-100 shadow-md p-4">
+    <h2 class="text-lg font-semibold mb-2">🔥 Add Mini App</h2>
+    <div class="bg-neutral text-white font-mono text-sm rounded px-3 py-1">
+        sdk.actions.addMiniApp()
+    </div>
+    <button class="btn btn-primary" onclick={() => sdk.actions.addMiniApp()}>Add Mini App</button>
+</div>
+
 
 <div class="card bg-base-100 shadow-md p-4">
     <h2 class="text-lg font-semibold mb-2">📝 Cast</h2>
@@ -102,3 +105,6 @@
         }
     }}>Open Mini App</button>
   </div>
+
+  <!-- wallet connect-->
+  <FarcasterWalletConnect />

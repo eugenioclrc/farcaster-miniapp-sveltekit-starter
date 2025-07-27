@@ -1,6 +1,6 @@
 export const IS_DEV_ENABLED = false;
-const baseSiteUrl = 'https://frames.flashsoft.eu';
-const devBaseUrl = 'https://tun-5545.flashsoft.eu';
+const baseSiteUrl = 'https://farcaster-miniapp-sveltekit-starter.vercel.app/';
+const devBaseUrl = 'https://fcaa3b33130b.ngrok-free.app';
 
 export const config = {
 	siteName: 'SveleteKit Starter Mini-App',

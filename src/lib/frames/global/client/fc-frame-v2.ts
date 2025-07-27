@@ -1,4 +1,3 @@
-import { FCConfig } from '$lib/config/farcaster';
 
 export const generateURLFCFrameEmbed = ({
 	featureImage = '',
@@ -20,7 +19,7 @@ export const generateURLFCFrameEmbed = ({
 		// Max 512 characters.
 		// Image must be 3:2 aspect ratio and less than 10 MB.
 		// Example: "https://yoink.party/img/start.png"
-		imageUrl: featureImage || FCConfig.FrameConfig.imageUrl,
+		imageUrl: featureImage,
 
 		// Button attributes
 		button: {
@@ -48,7 +47,7 @@ export const generateURLFCFrameEmbed = ({
 				// Max 512 characters.
 				// Image must be 200x200px and less than 1MB.
 				// Example: "https://yoink.party/img/splash.png"
-				splashImageUrl: FCConfig.FrameConfig.splashImageUrl,
+				splashImageUrl: 'https://farcaster-miniapp-sveltekit-starter.vercel.app/logo.png',
 
 				// Hex color code.
 				// Example: "#eeeee4"

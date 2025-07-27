@@ -4,15 +4,11 @@
 	import sdk from '@farcaster/miniapp-sdk'
 
 	import { onMount } from 'svelte';
-	import { getConfig } from '$lib/frames/global/farcaster-wallet';
 	import {
 		frameWalletConfig,
 		isViewingFromFrame,
-		isWalletReady
 	} from '$lib/stores/global/main';
 	import OnlyViewUsingFrame from './OnlyViewUsingFrame.svelte';
-	import { watchConnections, getAccount, connect } from '@wagmi/core';
-	import { farcasterMiniApp as miniAppConnector } from '@farcaster/miniapp-wagmi-connector';
 
 	import { page as SveltePage } from '$app/state';
 	import { config } from '$lib/config';
@@ -26,29 +22,11 @@
 		'Mini app starter for SvelteKit using Farcaster, 2 demo apps are included';
 
 	onMount(async () => {
-		//const module = await import('@farcaster/miniapp-sdk');
 		const context = await sdk.context;
 		sdk.actions.ready();
-		const config = await getConfig();
-		frameWalletConfig.set(config);
 
-		const result = await connect(config, {
-			connector: miniAppConnector()
-		});
 		if ((context?.user?.fid || 0) > 0) {
 			isViewingFromFrame.set(true);
-		}
-		if (getAccount($frameWalletConfig)?.address) {
-			isWalletReady.set(true);
-		} else {
-			const unwatch = watchConnections($frameWalletConfig, {
-				onChange() {
-					if (getAccount($frameWalletConfig)?.address) {
-						isWalletReady.set(true);
-						unwatch();
-					}
-				}
-			});
 		}
 	});
 
