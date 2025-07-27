@@ -94,3 +94,18 @@
   </div>
 
 
+  <div class="card bg-base-100 shadow-md p-4">
+    <h2 class="text-lg font-semibold mb-2">🔍 Open Mini App URL</h2>
+    <select class="select select-bordered w-full max-w-xs mt-0.5" bind:value={selectedUrl}>
+        {#each [{label: "Bountycaster (Embed)", value: "https://www.bountycaster.xyz/bounty/0x392626b092e05955c11c41c5df8e2fb8003ece78"}, {label: "Demo MiniApp", value: "https://farcaster.xyz/miniapps/AEk2134ULE4Y/sveletekit-starter-mini-app"}, {label: "Invalid URL", value: "https://swizec.com/"}] as option}
+            <option value={option.value}>{option.label}</option>
+        {/each}
+    </select>
+    <button class="btn btn-primary mt-0.5" onclick={async () => {
+        try {
+            await $frameSDK.actions.openMiniApp({url: selectedUrl});
+        } catch (error) {
+            console.error(error);
+        }
+    }}>Open Mini App</button>
+  </div>
