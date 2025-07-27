@@ -12,6 +12,7 @@
 
     let token: string | null = $state(null);
     let isContextOpen = $state(false);
+    let selectedUrl: string = $state("");
     const toggleContext = () => {
         isContextOpen = !isContextOpen;
     };
@@ -27,6 +28,8 @@
             });
         }
     });
+
+    let fid: number = $state(16270);
 </script>
 <Header />
 
@@ -49,7 +52,7 @@
 <div class="card bg-base-100 shadow-md p-4">
     <h2 class="text-lg font-semibold mb-2">🔑 Quick Auth</h2>
     <div class="bg-neutral text-white font-mono text-sm rounded px-3 py-1">
-        sdk.experimental.quickAuth()
+        sdk.quickAuth()
     </div>
     <QuickAuth setToken={(t) => token = t} />
 </div>
@@ -62,3 +65,32 @@
     </div>
     <ComposeCastAction />
   </div>
+
+
+<div class="card bg-base-100 shadow-md p-4">
+    <h2 class="text-lg font-semibold mb-2">📝 Cast</h2>
+    <div class="bg-neutral text-white font-mono text-sm rounded px-3 py-1">
+        sdk.actions.openUrl( URL )
+    </div>
+    <button class="btn btn-primary mt-0.5" onclick={() => $frameSDK.actions.openUrl("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}>Open URL</button>
+    <button class="btn btn-primary mt-0.5" onclick={() => $frameSDK.actions.openUrl("https://warpcast.com/~/compose")}>Open Warpcast URL</button>
+  </div>
+
+<div class="card bg-base-100 shadow-md p-4">
+    <h2 class="text-lg font-semibold mb-2">👤 View Profile</h2>
+    <div class="bg-neutral text-white font-mono text-sm rounded px-3 py-1">
+        sdk.actions.viewProfile(&#123; fid: FID &#125;)
+    </div>
+    <input type="number" bind:value={fid} class="input input-bordered w-full max-w-xs mt-0.5" />
+    <button class="btn btn-primary" onclick={() => $frameSDK.actions.viewProfile({ fid: fid })}>View Profile</button>
+</div>
+
+<div class="card bg-base-100 shadow-md p-4">
+    <h2 class="text-lg font-semibold mb-2">📝 Cast</h2>
+    <div class="bg-neutral text-white font-mono text-sm rounded px-3 py-1">
+        sdk.actions.close()
+    </div>
+    <button class="btn btn-primary" onclick={() => $frameSDK.actions.close()}>Close</button>
+  </div>
+
+

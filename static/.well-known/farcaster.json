@@ -7,11 +7,11 @@
   "frame": {
     "version": "1",
     "name": "SveleteKit starter Mini App",
-    "iconUrl": "https://tunn-5545.flashsoft.eu/hotlink-ok/favicon.png",
+    "iconUrl": "https://farcaster-miniapp-sveltekit-starter.vercel.app/favicon.png",
     "homeUrl": "https://farcaster-miniapp-sveltekit-starter.vercel.app/",
-    "imageUrl": "https://tunn-5545.flashsoft.eu/images/ogs/ffe-og-index.webp",
+    "imageUrl": "https://farcaster-miniapp-sveltekit-starter.vercel.app/logo.png",
     "buttonTitle": "Open App",
-    "splashImageUrl": "https://tunn-5545.flashsoft.eu/hotlink-ok/favicon.png",
+    "splashImageUrl": "https://farcaster-miniapp-sveltekit-starter.vercel.app/favicon.png",
     "splashBackgroundColor": "#35303f"
   }
 } 
