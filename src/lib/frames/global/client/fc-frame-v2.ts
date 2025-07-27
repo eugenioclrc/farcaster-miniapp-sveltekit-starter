@@ -4,7 +4,7 @@ export const generateURLFCFrameEmbed = ({
 	featureImage = '',
 	url,
 	buttonTitle = 'Open App',
-	appName = 'Flashsoft.eu Farcaster Mini Apps'
+	appName = 'Demo Farcaster Mini Apps'
 }: {
 	featureImage?: string;
 	url: string;

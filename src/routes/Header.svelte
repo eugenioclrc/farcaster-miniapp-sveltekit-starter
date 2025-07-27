@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { frameSDK } from '$lib/stores/global/main';
+	import sdk from '@farcaster/miniapp-sdk';
 
 	function openProfile(e: Event) {
 		e.preventDefault();
-		$frameSDK.actions.viewProfile({ fid: 16270 });
+		sdk.actions.viewProfile({ fid: 16270 });
 	}
 
 	function openHome(e: Event) {

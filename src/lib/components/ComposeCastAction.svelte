@@ -1,12 +1,10 @@
 <script lang="ts">
-    import {
-		frameSDK
-	} from '$lib/stores/global/main';
+    import sdk from '@farcaster/miniapp-sdk';
   
     let result: any = $state(null);
   
     async function compose() {
-      result = await $frameSDK.actions.composeCast({
+      result = await sdk.actions.composeCast({
         text: 'Hello from Demo Mini App',
         embeds: ['https://farcaster-miniapp-sveltekit-starter.vercel.app/'],
       });

@@ -1,13 +1,11 @@
 <script lang="ts">
 	import '../app.css';
 
-	import { sdk } from '@farcaster/miniapp-sdk'
+	import sdk from '@farcaster/miniapp-sdk'
 
-	import type { FrameSdk } from '$lib/types/frame-sdk';
 	import { onMount } from 'svelte';
 	import { getConfig } from '$lib/frames/global/farcaster-wallet';
 	import {
-		frameSDK,
 		frameWalletConfig,
 		isViewingFromFrame,
 		isWalletReady
@@ -27,16 +25,10 @@
 	const pageDescription =
 		'Mini app starter for SvelteKit using Farcaster, 2 demo apps are included';
 
-	async function pageIsReady() {
-		const context = await sdk.context;
-		sdk.actions.ready();
-		return context;
-	}
-
 	onMount(async () => {
 		//const module = await import('@farcaster/miniapp-sdk');
-		const context = await pageIsReady();
-		frameSDK.set(sdk);
+		const context = await sdk.context;
+		sdk.actions.ready();
 		const config = await getConfig();
 		frameWalletConfig.set(config);
 

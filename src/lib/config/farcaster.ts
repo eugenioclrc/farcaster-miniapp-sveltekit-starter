@@ -63,8 +63,8 @@ export const FCConfig = {
 		// Image must be 200x200px and less than 1MB.
 		// Example: "https://yoink.party/img/splash.png"
 		splashImageUrl: IS_DEV_ENABLED
-			? config.devBaseUrl + '/hotlink-ok/logo.png'
-			: config.baseSiteUrl + '/hotlink-ok/logo.png',
+			? config.devBaseUrl + '/logo.png'
+			: config.baseSiteUrl + '/logo.png',
 
 		// Hex color code.
 		// Example: "#eeeee4"

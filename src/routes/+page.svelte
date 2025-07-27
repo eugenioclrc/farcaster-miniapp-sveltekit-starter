@@ -1,14 +1,9 @@
 <script lang="ts">
 	import Header from './Header.svelte';
-    import {
-		frameSDK,
-		frameWalletConfig,
-		isViewingFromFrame,
-		isWalletReady
-	} from '$lib/stores/global/main';
 
     import QuickAuth from '$lib/components/QuickAuth.svelte';
     import ComposeCastAction from '$lib/components/ComposeCastAction.svelte';
+	import sdk from '@farcaster/miniapp-sdk';
 
     let token: string | null = $state(null);
     let isContextOpen = $state(false);
@@ -19,10 +14,8 @@
 
     let context: any = $state(null);
     $effect(() => {
-        console.log('frameSDK', $frameSDK);
-        if($frameSDK && $frameSDK.context) {
-            console.log('frameSDK', $frameSDK);
-            $frameSDK.context.then(ctx => {
+        if(sdk.context) {
+            sdk.context.then(ctx => {
                 console.log('ctx', ctx);
                 context = ctx;
             });
@@ -72,8 +65,8 @@
     <div class="bg-neutral text-white font-mono text-sm rounded px-3 py-1">
         sdk.actions.openUrl( URL )
     </div>
-    <button class="btn btn-primary mt-0.5" onclick={() => $frameSDK.actions.openUrl("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}>Open URL</button>
-    <button class="btn btn-primary mt-0.5" onclick={() => $frameSDK.actions.openUrl("https://warpcast.com/~/compose")}>Open Warpcast URL</button>
+    <button class="btn btn-primary mt-0.5" onclick={() => sdk.actions.openUrl("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}>Open URL</button>
+    <button class="btn btn-primary mt-0.5" onclick={() => sdk.actions.openUrl("https://warpcast.com/~/compose")}>Open Warpcast URL</button>
   </div>
 
 <div class="card bg-base-100 shadow-md p-4">
@@ -82,7 +75,7 @@
         sdk.actions.viewProfile(&#123; fid: FID &#125;)
     </div>
     <input type="number" bind:value={fid} class="input input-bordered w-full max-w-xs mt-0.5" />
-    <button class="btn btn-primary" onclick={() => $frameSDK.actions.viewProfile({ fid: fid })}>View Profile</button>
+    <button class="btn btn-primary" onclick={() => sdk.actions.viewProfile({ fid: fid })}>View Profile</button>
 </div>
 
 <div class="card bg-base-100 shadow-md p-4">
@@ -90,7 +83,7 @@
     <div class="bg-neutral text-white font-mono text-sm rounded px-3 py-1">
         sdk.actions.close()
     </div>
-    <button class="btn btn-primary" onclick={() => $frameSDK.actions.close()}>Close</button>
+    <button class="btn btn-primary" onclick={() => sdk.actions.close()}>Close</button>
   </div>
 
 
@@ -103,7 +96,7 @@
     </select>
     <button class="btn btn-primary mt-0.5" onclick={async () => {
         try {
-            await $frameSDK.actions.openMiniApp({url: selectedUrl});
+            await sdk.actions.openMiniApp({url: selectedUrl});
         } catch (error) {
             console.error(error);
         }
