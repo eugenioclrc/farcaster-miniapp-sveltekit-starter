@@ -12,7 +12,7 @@
     "homeUrl": "https://farcaster-miniapp-sveltekit-starter.vercel.app/",
     "imageUrl": "https://farcaster-miniapp-sveltekit-starter.vercel.app/logo.png",
     "buttonTitle": "Open App",
-    "splashImageUrl": "https://farcaster-miniapp-sveltekit-starter.vercel.app/favicon.png",
+    "splashImageUrl": "https://farcaster-miniapp-sveltekit-starter.vercel.app/logo.png",
     "splashBackgroundColor": "#35303f"
   }
 } 
